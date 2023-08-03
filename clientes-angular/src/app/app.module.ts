@@ -11,6 +11,7 @@ import { ClientesComponent } from './components/clientes/clientes.component';
 
 import { ClienteService } from './components/clientes/cliente.service';
 import { DirectivaComponent } from './components/directiva/directiva.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { DirectivaComponent } from './components/directiva/directiva.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule,
   ],
   providers: [ClienteService],
   bootstrap: [AppComponent],
