@@ -1,0 +1,51 @@
+<mat-sidenav #sidenav>
+    <mat-nav-list (click)="sidenav.close()">
+        <a mat-list-item routerLink="/">
+            <mat-icon>account_circle</mat-icon>
+            <span>Clientes</span>
+        </a>
+
+        <a mat-list-item routerLink="directivas">
+            <mat-icon>question_answer</mat-icon>
+            <span>Directivas</span>
+        </a>
+
+        <a mat-list-item>
+            <mat-icon>person_add</mat-icon>
+            <span>Register</span>
+        </a>
+
+        <a mat-list-item>
+            <mat-icon>account_circle</mat-icon>
+            <span>Login</span>
+        </a>
+
+    </mat-nav-list>
+</mat-sidenav>
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.open()">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <a mat-button [matMenuTriggerFor]="dropdown">
+        <span>Screens</span>
+    </a>
+
+    <mat-menu #dropdown>
+        <button mat-menu-item routerLink="/">Courses</button>
+        <button mat-menu-item routerLink="/directivas">Directivas</button>
+    </mat-menu>
+
+    <a mat-button>
+        <mat-icon>person_add</mat-icon>
+        <span>Register</span>
+    </a>
+
+    <a mat-button>
+        <mat-icon>account_circle</mat-icon>
+        <span>Login</span>
+    </a>
+
+
+
+</mat-toolbar>
