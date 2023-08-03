@@ -8,11 +8,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ClienteService {
+  private urlEndpoint = 'http://localhost:8080/api/clientes';
+
   constructor(private http: HttpClient) {}
 
   getClientes(): Observable<Cliente[]> {
-    const url = '';
-    //this.http.get(url);
-    return of(CLIENTES);
+    let res = this.http.get<Cliente[]>(this.urlEndpoint);
+    console.log(res);
+    return res;
+    //return of(CLIENTES);
   }
 }
